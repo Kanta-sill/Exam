@@ -1,0 +1,19 @@
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <title>Title</title>#}
+{#</head>#}
+{#<body>#}
+{##}
+{#</body>#}
+{#</html>#}
+{% extends 'exam/base.html' %}
+{% block body %}
+
+{% for item in exam_list %}
+    {{ item.title }}
+    <a href="{% url 'exam:detail' item.id %}">Detail</a><br>
+{% endfor %}
+
+{% endblock %}

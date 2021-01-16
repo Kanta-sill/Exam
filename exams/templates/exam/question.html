@@ -1,0 +1,20 @@
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <title>Title</title>#}
+{#</head>#}
+{#<body>#}
+{##}
+{#</body>#}
+{#</html>#}
+
+{% block body %}
+{% for ques in ques_list %}
+
+{{ ques.content }}
+<a href="{% url 'exam:ques_detail' ques.id %}">Detail</a><br>
+
+{% endfor %}
+    <a href="{% url 'exam:ques_create' %}">Add Question</a>
+{% endblock %}

@@ -1,0 +1,24 @@
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <title>Title</title>#}
+{#</head>#}
+{#<body>#}
+{##}
+{#</body>#}
+{#</html>#}
+
+{% block body %}
+    {{ ques.cate_id }}-
+    {{ ques.content }}-
+    {{ ques.type }}-
+    {{ ques.correct_ans }}-
+    {{ ques.a_ans }}-
+    {{ ques.b_ans }}-
+    {{ ques.c_ans }}-
+    {{ ques.d_ans }}-
+    {{ ques.mark }}
+    <a href="{% url 'exam:ques_update' ques.id %}">Update</a>
+    <a href="{% url 'exam:ques_delete' ques.id %}">Delete</a>
+{% endblock %}
